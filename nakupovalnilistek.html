@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        th, td {
+          padding: 5px;
+          text-align: left;    3
+        }
+
+        #glavaTabele {
+            background-color: gray;
+        }
+        .container {
+            display:flex;
+            justify-content: center;
+            height: 100vh;
+            width:100vw;
+        }
+        </style>
+</head>
+<body>
+    
+<div class="container">
+<table>
+    <tr>
+        <th id="glavaTabele">Zaporedna ŠT </th>
+        <th id="glavaTabele">Artikel</th>
+    </tr>
+    	<script>
+             /*
+    Začetni JavaScript nakupovalni listek
+    Ime datoteke: nakupovalnivozicek.html
+    Avtor: Erik Vodopivec
+    Opis: Program povpraša po št. izdelkov, ki jih bomo kupili, nato pa za vsakega 
+    posebej povpraša po imenu izdelka.
+    Izhod: Izpis nakupovalnega listka z zaporednimi številkami  v brskalniku.
+     */
+            //povprašamo po št. artiklov ki jih žeimo vnesti v tabelo in shranimo to v spremenljivko
+            var stArtiklov =prompt('Koliko stvari želite kupiti?');
+            for (i=0; i<stArtiklov; i++)  {     // ustvarimo for zanko da povpraša in izpiše tolikokrat koikor je izdelkov
+                // povprašamo po imenu artikla
+                var artikel=prompt('Vpiši ime artikla za na seznam?');
+                //izpišemo zaporedno št. artikla in ime artikla
+                document.write('<tr>'+ '<td>' +(i+1) + '</td>'+ '<td>'+ artikel + '</td>'+'</tr>');
+            } //konec for zanke FOR
+        </script>
+</table>
+</div>
+</body>
+</html>
